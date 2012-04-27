@@ -3,9 +3,9 @@ var Worker = require('dnode-worker');
 Worker({
   add: function () {
   	var search = require('twitter-search');
-  	_mongoose = require('mongoose');
-	_schema = _mongoose.Schema;
-	_mongoose.connect('mongodb://userast:ast772689@ds033037.mongolab.com:33037/api-search-twitts');
+ //  	_mongoose = require('mongoose');
+	// _schema = _mongoose.Schema;
+	// _mongoose.connect('mongodb://userast:ast772689@ds033037.mongolab.com:33037/api-search-twitts');
 
 	// var TagSchema = new _schema({
 	// 	value: {type: String},
