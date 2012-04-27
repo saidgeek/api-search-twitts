@@ -20,9 +20,6 @@ app.configure(function(){
   app.use(express.static(__dirname + '/public'));
 });
 
-app.config = JSON.parse(require('fs').readFileSync('./config.json', 'utf8'));
-app.config.time = "13300"
-
 app.configure('development', function(){
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
