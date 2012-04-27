@@ -5,6 +5,10 @@
   , "dependencies": {
       "express": "2.5.8"
     , "jade": ">= 0.0.1"
+    ,"MD5":"0.0.0"
+    ,"dnode-worker":"0.1.1"
+    ,"mongoose":"2.6.0"
+    ,"twitter-search":"0.2.2"
   }
   ,"engines": {
      "node": "0.6.x"
