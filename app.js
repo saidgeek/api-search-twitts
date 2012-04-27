@@ -31,6 +31,6 @@ app.configure('production', function(){
 require('./models/main.js');
 require('./routes/main.js');
 
-//require('./search.js')
+require('./search.js')
 
 app.listen(process.env.PORT || 3000);
