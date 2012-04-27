@@ -4,7 +4,7 @@ GLOBAL._schema = _mongoose.Schema;
 GLOBAL._objejctid = _schema.ObjectId;
 
 // Cadena de conexion a base de datos
-var conURL = 'mongodb://localhost/search_twitts';
+var conURL = 'mongodb://usertwitt:atx772689@ds033107.mongolab.com:33107/heroku_app4282886';
 
 // Schemas
 require('./tags.js');

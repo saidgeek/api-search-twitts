@@ -8,13 +8,13 @@
     "mongoose": "2.6.0",
     "twitter-search": "0.2.2",
     "dnode-worker": "0.1.1",
-    "MD5": "0.0.0"
+    "MD5": "0.0.0",
+  "engines":{
+      "node": "*"
+  },
   },
   "devDependencies": {},
   "optionalDependencies": {},
-  "engines": {
-    "node": "*"
-  },
   "author": "Andres Espinace <atarix.010101@gmail.com> (@saidGeeK)",
   "description": "Api para la busqueda de terminos en twitts de forma automatica",
   "repository": {
