@@ -1,5 +1,10 @@
 {
   "name":"api-search-twitts",
-  "node":"0.6.12",
-  "author":"saidgeek"
+  "node":"0.6.13",
+  "npm":"1.1.9",
+  "author":"saidgeek", 
+  "dependencies": {
+      "express": "2.5.8"
+    , "jade": ">= 0.0.1"
+  }
 }
