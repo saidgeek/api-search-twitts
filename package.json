@@ -1,24 +1,5 @@
 {
-  "name": "api-search-twitts",
-  "version": "0.0.1",
-  "private": true,
-  "dependencies": {
-    "express": "2.5.8",
-    "jade": ">= 0.0.1",
-    "mongoose": "2.6.0",
-    "twitter-search": "0.2.2",
-    "dnode-worker": "0.1.1",
-    "MD5": "0.0.0",
-  "engines":{
-      "node": "*"
-  },
-  },
-  "devDependencies": {},
-  "optionalDependencies": {},
-  "author": "Andres Espinace <atarix.010101@gmail.com> (@saidGeeK)",
-  "description": "Api para la busqueda de terminos en twitts de forma automatica",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/saidgeek/api-search-twitts.git"
-  }
+  "name":"api-search-twitts",
+  "node":"0.6.12",
+  "author":"saidgeek"
 }

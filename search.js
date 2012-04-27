@@ -5,7 +5,7 @@ Worker({
   	var search = require('twitter-search');
   	_mongoose = require('mongoose');
 	_schema = _mongoose.Schema;
-	_mongoose.connect('mongodb://usertwitt:atx772689@ds033107.mongolab.com:33107/heroku_app4282886');
+	_mongoose.connect('mongodb://userast:ast772689@ds033037.mongolab.com:33037/api-search-twitts');
 
 	var TagSchema = new _schema({
 		value: {type: String},
