@@ -1,0 +1,5 @@
+{
+	"time": "17310",
+	"conDbMongo_dev":"mongodb://localhost/searh_twitts",
+	"conDbMongo_pro":"mongodb://localhost/searh_twitts"
+}
