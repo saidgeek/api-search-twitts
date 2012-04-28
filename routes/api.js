@@ -81,7 +81,7 @@ exports.list_twitts = function(req, res){
 			res.json({ type: 'error', value: 'consumerKey incorrecto.' });
 		}else{
 			if(client){
-				app.models.Twitts.find({}, { limit: 1}, function(err, twitts){
+				app.models.Twitts.find({}, null, { limit: 1 }, function(err, twitts){
 					if(err){
 						res.json({ type: 'error', value: 'No se han posdido listar los twitts.' });
 					}else{
