@@ -59,7 +59,10 @@ exports.list_tag = function(req, res){
 			res.json({ type: 'error', value: 'consumerKey incorrecto.' });
 		}else{
 			if(client){
-				app.models.Tag.find({}, { limit: 100}, function(err, tags){
+				var limit = 100
+				if(req.param('limit'))
+					limit = req.param('limit');
+				app.models.Tag.find({}, null, { limit: limit }, function(err, tags){
 					if(err){
 						res.json({ type: 'error', value: 'No se han posdido listar los tags.' });
 					}else{
@@ -81,7 +84,10 @@ exports.list_twitts = function(req, res){
 			res.json({ type: 'error', value: 'consumerKey incorrecto.' });
 		}else{
 			if(client){
-				app.models.Twitts.find({}, null, { limit: 1 }, function(err, twitts){
+				var limit = 100
+				if(req.param('limit'))
+					limit = req.param('limit');
+				app.models.Twitts.find({}, null, { limit: limit}, function(err, twitts){
 					if(err){
 						res.json({ type: 'error', value: 'No se han posdido listar los twitts.' });
 					}else{
@@ -107,8 +113,11 @@ exports.list_twitts_by_tag = function(req, res){
 					if(err){
 						res.json({ type: 'error', value: 'El tag solicitado no existe.' });
 					}else{
+						var limit = 100
+						if(req.param('limit'))
+							limit = req.param('limit');
 						console.log(tag._id);
-						app.models.Twitts.find({ 'tag_id': tag._id }, { limit: 100}, function(err, twitts){
+						app.models.Twitts.find({ 'tag_id': tag._id }, null, { limit: limit}, function(err, twitts){
 							if(err){
 								res.json({ type: 'error', value: 'No se han posdido listar los twitts.' });
 							}else{
