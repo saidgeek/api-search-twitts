@@ -39,7 +39,7 @@ exports.create_tag = function(req, res){
 							});
 						}else{
 							console.log('El tag ya existe.');
-							res.json({ type: 'success', value: 'El tag ya existe.' });
+							res.json({ type: 'exists', value: 'El tag ya existe.' });
 						}
 					}
 				});
@@ -59,7 +59,7 @@ exports.list_tag = function(req, res){
 			res.json({ type: 'error', value: 'consumerKey incorrecto.' });
 		}else{
 			if(client){
-				app.models.Tag.find({}, function(err, tags){
+				app.models.Tag.find({}, { limit: 100}, function(err, tags){
 					if(err){
 						res.json({ type: 'error', value: 'No se han posdido listar los tags.' });
 					}else{
@@ -108,7 +108,7 @@ exports.list_twitts_by_tag = function(req, res){
 						res.json({ type: 'error', value: 'El tag solicitado no existe.' });
 					}else{
 						console.log(tag._id);
-						app.models.Twitts.find({ 'tag_id': tag._id }, function(err, twitts){
+						app.models.Twitts.find({ 'tag_id': tag._id }, { limit: 100}, function(err, twitts){
 							if(err){
 								res.json({ type: 'error', value: 'No se han posdido listar los twitts.' });
 							}else{
