@@ -92,7 +92,7 @@ setInterval(function(){
     }
     
   });
-}, 60000);
+}, 7200000);
   
 
 app.listen(process.env.PORT || 3000);
