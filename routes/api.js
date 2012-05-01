@@ -87,11 +87,11 @@ exports.list_twitts = function(req, res){
 				var limit = 100
 				if(req.param('limit'))
 					limit = req.param('limit');
-				app.models.Twitts.find({}, null, { asc: 'created_at', limit: limit}, function(err, twitts){
+				app.models.Twitts.find({}, null, { limit: limit}, function(err, twitts){
 					if(err){
 						res.json({ type: 'error', value: 'No se han posdido listar los twitts.' });
 					}else{
-						res.json({ type: 'success', data: twitts });
+						res.json({ type: 'success', data: twitts.asc('created_at') });
 					}
 				});
 			}else{
