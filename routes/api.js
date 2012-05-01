@@ -87,7 +87,7 @@ exports.list_twitts = function(req, res){
 				var limit = 100
 				if(req.param('limit'))
 					limit = req.param('limit');
-				app.models.Twitts.find({}, null, { limit: limit, sort: -1}, function(err, twitts){
+				app.models.Twitts.find({}, null, { desc: 'created_at', limit: limit}, function(err, twitts){
 					if(err){
 						res.json({ type: 'error', value: 'No se han posdido listar los twitts.' });
 					}else{
@@ -117,7 +117,7 @@ exports.list_twitts_by_tag = function(req, res){
 						if(req.param('limit'))
 							limit = req.param('limit');
 						console.log(tag._id);
-						app.models.Twitts.find({ 'tag_id': tag._id }, null, { limit: limit, sort: -1}, function(err, twitts){
+						app.models.Twitts.find({ 'tag_id': tag._id }, null, { desc: 'created_at', limit: limit}, function(err, twitts){
 							if(err){
 								res.json({ type: 'error', value: 'No se han posdido listar los twitts.' });
 							}else{
