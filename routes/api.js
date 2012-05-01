@@ -117,7 +117,7 @@ exports.list_twitts_by_tag = function(req, res){
 						if(req.param('limit'))
 							limit = req.param('limit');
 						console.log(tag._id);
-						app.models.Twitts.where('tag_id': tag._id).limit(limit).desc('created_at').run(function(err, twitts){
+						app.models.Twitts.where(tag_id: tag._id).limit(limit).desc('created_at').run(function(err, twitts){
 							if(err){
 								res.json({ type: 'error', value: 'No se han posdido listar los twitts.' });
 							}else{
